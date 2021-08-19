@@ -21,7 +21,7 @@ def representacao_lista(arquivo,vertices,arestas):
     listaAd = [[] for i in range(vertices)]  # cria lista
     for i in range(arestas):
         l = arquivo.readline()
-        lInt = list(map(int, (l.split(' '))))
+        lInt =l.split(' ')
         origem = int(lInt[0])
         destino = int(lInt[1])
         peso = int(lInt[2])
@@ -34,7 +34,7 @@ def representacao_matriz(arquivo,vertices,arestas):
     matrizAd = [[0 for i in range(vertices)] for i in range(vertices)]  # cria matriz
     for i in range(arestas):
         l = arquivo.readline()
-        lInt = list(map(int, (l.split(' '))))
+        lInt = l.split(' ')
         origem = int(lInt[0])
         destino = int(lInt[1])
         peso = int(lInt[2])

@@ -1,5 +1,5 @@
 #algoritmo construtivo
-def vizinho_mais_proximo (grafo):
+def vizinhoMaisProximo (grafo):
     U = 0
     C = []
     Q = [ v for v in range (len (grafo)) ] #vertices a visitar
