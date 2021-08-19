@@ -1,3 +1,4 @@
+#algoritmo construtivo
 def vizinho_mais_proximo (grafo):
     U = 0
     C = []
@@ -16,5 +17,8 @@ def vizinho_mais_proximo (grafo):
         Q.remove(V)
         U = V
         C.append(C[0])
-    #print(C)
+    print(C)
     return C
+
+#algoritmo de refinamento
+
