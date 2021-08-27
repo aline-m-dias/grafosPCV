@@ -1,7 +1,10 @@
 from random import choice
 from time import time
+
 #algoritmo construtivo
-def vizinhoMaisProximo(grafo):
+
+def vizinhoMaisProximo (grafo):
+
     U = 0
     C = []
     Q = [i for i in range(len(grafo))] #vertices a visitar

@@ -1,5 +1,6 @@
 import representacao
 import algoritmoPCV
+'''import numpy as np'''
 
 nome_arquivo = input("Digite o nome do arquivo com a sua extensão:")
 manipulador = open(nome_arquivo, "r")
