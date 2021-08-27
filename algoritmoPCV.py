@@ -60,9 +60,13 @@ def twoOpt(S, grafo,tempo):
 
             if c2 < c1:
                 S = S1
-    print("Distancia 2-OPT:{}".format(c2))
-    print("Tempo: %.2f{} segundos".format(time() -inicio))
-    print("Rota 2-OPT:{}".format(S))
+
+    arquivo= open('saida_algoritmo_refinamento.txt', 'w+')
+    arquivo.write(("Distancia 2-OPT:{} ".format(c2)))
+    arquivo.write(("Tempo:{} segundos".format(time() -inicio)))
+    arquivo.write(("Rota 2-OPT:{}".format(S)))
+
+
 
     return S
 

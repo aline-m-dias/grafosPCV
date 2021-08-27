@@ -1,0 +1,1 @@
+Distancia 2-OPT:20.6 Tempo:60.00531888008118 segundosRota 2-OPT:[0, 1, 5, 4, 3, 2, 0]
