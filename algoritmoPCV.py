@@ -1,4 +1,4 @@
-from random import choice
+import random
 from time import time
 
 #algoritmo construtivo
@@ -25,6 +25,16 @@ def vizinhoMaisProximo (grafo):
     return C
 
 #algoritmo de refinamento
+def avaliaCusto(S, grafo):
+    custo = 0
+    for i in range(len(S)-1):
+        u = S[i]
+        v = S[i+1]
+        for j in grafo[u]:
+            if j[0] == v:
+                custo = custo + j[1]
+                break
+    return custo
 
 def twoOpt(S, grafo,tempo):
 
@@ -32,12 +42,12 @@ def twoOpt(S, grafo,tempo):
 
     while time() - inicio < tempo:
         #escolha aleatória das arestas
-        aresta1 = choice(S)
+        aresta1 = random.choice(S)
         #print(aresta1)
-        aresta2 = choice(S)
+        aresta2 = random.choice(S)
         #print(aresta2)
 
-        if aresta1 != aresta2 and aresta1 != S[0] and aresta2 != S[0]:
+        if aresta1 != S[0] and aresta2 != S[0] and aresta1 != aresta2:
 
             S1 = S[:] #recebe a rota S
 
@@ -50,19 +60,9 @@ def twoOpt(S, grafo,tempo):
 
             if c2 < c1:
                 S = S1
-
     print("Distancia 2-OPT:{}".format(c2))
+    print("Tempo: %.2f{} segundos".format(time() -inicio))
     print("Rota 2-OPT:{}".format(S))
-    print("Tempo:{} segundos".format(time() -inicio))
+
     return S
 
-def avaliaCusto(S, grafo):
-    custo = 0
-    for i in range(len(S)-1):
-        u = S[i]
-        v = S[i+1]
-        for j in grafo[u]:
-            if j[0] == v:
-                custo = custo + j[1]
-                break
-    return custo
